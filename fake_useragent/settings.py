@@ -38,3 +38,8 @@ HTTP_TIMEOUT = 10
 HTTP_RETRIES = 5
 
 HTTP_DELAY = 5
+
+try:
+    from config import *  # noqa
+except ImportError:
+    pass
