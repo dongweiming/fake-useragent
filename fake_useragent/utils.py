@@ -108,22 +108,22 @@ def load():
 
 
 def write(data):
-    with codecs.open(settings.DB, encoding='utf-8', mode='wb+',) as fp:
+    with codecs.open(settings.DATA_DB, encoding='utf-8', mode='wb+',) as fp:
         json.dump(data, fp)
 
 
 def read():
-    with codecs.open(settings.DB, encoding='utf-8', mode='rb',) as fp:
+    with codecs.open(settings.DATA_DB, encoding='utf-8', mode='rb',) as fp:
         return json.load(fp)
 
 
 def exist():
-    return os.path.isfile(settings.DB)
+    return os.path.isfile(settings.DATA_DB)
 
 
 def rm():
     if exist():
-        os.remove(settings.DB)
+        os.remove(settings.DATA_DB)
 
 
 def update():

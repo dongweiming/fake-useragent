@@ -5,7 +5,7 @@ import tempfile
 
 __version__ = '0.1.2'
 
-DB = os.path.join(tempfile.gettempdir(), 'fake_useragent_{version}.json'.format(  # noqa
+DATA_DB = os.path.join(tempfile.gettempdir(), 'fake_useragent_{version}.json'.format(  # noqa
     version=__version__,
 ))
 
